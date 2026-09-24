@@ -62,7 +62,7 @@ with tab2:
             with st.spinner("Dr. Soetens overlegt met de literatuur..."):
                 try:
                     # We gebruiken het snelle en slimme Gemini model
-                    model = genai.GenerativeModel('gemini-1.5-flash')
+                    model = genai.GenerativeModel('gemini-2.5-flash'))
                     
                     # Zoek naar lokale bestanden om mee te sturen als context
                     context_tekst = ""
