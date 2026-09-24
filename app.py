@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("📚 Anesthesie Wereldliteratuur Databank")
+st.title("📚 Anesthesie Literatuur Databank")
 st.markdown("Welkom! Dit is de centrale bibliotheek voor boeken, richtlijnen en artikelen van de dienst anesthesie. Iedereen kan hier documenten aan toevoegen en doorzoeken.")
 
 # Mappen aanmaken als ze nog niet bestaan
