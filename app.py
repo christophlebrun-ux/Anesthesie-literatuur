@@ -14,8 +14,8 @@ st.markdown("Welkom! Dit is de centrale bibliotheek voor boeken, richtlijnen en 
 # Mappen aanmaken als ze nog niet bestaan
 os.makedirs("data/literatuur", exist_ok=True)
 
-# Twee tabbladen: 1. Bibliotheek & Upload, 2. AI Vraagbaak
-tab1, tab2 = st.tabs(["📖 Bibliotheek & Upload", "🤖 AI Vraagbaak"])
+# Twee tabbladen: 1. Bibliotheek & Upload, 2. Ask Dr. Soetens
+tab1, tab2 = st.tabs(["📖 Bibliotheek & Upload", "🩺 Ask Dr. Soetens"])
 
 # --- TAB 1: BIBLIOTHEEK & UPLOAD ---
 with tab1:
@@ -39,18 +39,21 @@ with tab1:
     else:
         st.info("Nog geen literatuur geüpload. Upload hierboven het eerste bestand.")
 
-# --- TAB 2: Ask Dr. Soetens --- 
+# --- TAB 2: ASK DR. SOETENS ---
 with tab2:
-    st.header("🤖 Ask Dr. Soetens")
-    st.markdown("Stel vragen over de toegevoegde boeken en artikelen in de literatuurbank.")
+    st.header("🩺 Ask Dr. Soetens")
+    st.markdown("Stel een klinische of wetenschappelijke vraag. Dr. Soetens (aangedreven door onze wereldliteratuur en artikelen) geeft advies en literatuuronderbouwing.")
     
-    user_query = st.text_input("Typ je vraag (bijv. 'Wat zegt de literatuur over de aanpak van een moeilijke luchtweg?'):")
+    user_query = st.text_input("Typ je vraag voor Dr. Soetens (bijv. 'Wat is het beste beleid bij een moeilijke intubatie?'):")
     
-    if st.button("Verstuur vraag"):
+    if st.button("Ask Dr. Soetens"):
         if user_query:
-            with st.spinner("AI doorzoekt de literatuur..."):
-                # Hier kun je de koppeling met Gemini / NotebookLM API maken
-                st.success(f"**Antwoord van de AI** (op basis van de wereldliteratuur voor: *'{user_query}'*):")
+            with st.spinner("Dr. Soetens raadpleegt de literatuur..."):
+                # Antwoordweergave
+                st.success(f"**Advies van Dr. Soetens over *'{user_query}'*:**")
+                st.write("Op basis van de beschikbare literatuur en boeken in onze databank volgt hier het onderbouwde advies...")
+        else:
+            st.warning("Voer eerst een vraag in.")or: *'{user_query}'*):")
                 st.write("De AI haalt hier straks de relevante passages uit de geüploade boeken en artikelen op om je van een onderbouwd antwoord te voorzien.")
         else:
             st.warning("Voer eerst een vraag in.")
