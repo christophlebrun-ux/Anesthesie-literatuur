@@ -46,14 +46,10 @@ with tab2:
     
     user_query = st.text_input("Typ je vraag voor Dr. Soetens (bijv. 'Wat is het beste beleid bij een moeilijke intubatie?'):")
     
-    if st.button("Ask Dr. Soetens"):
+    if st.button("Vraag het Dr. Soetens"):
         if user_query:
             with st.spinner("Dr. Soetens raadpleegt de literatuur..."):
-                # Antwoordweergave
                 st.success(f"**Advies van Dr. Soetens over *'{user_query}'*:**")
                 st.write("Op basis van de beschikbare literatuur en boeken in onze databank volgt hier het onderbouwde advies...")
-        else:
-            st.warning("Voer eerst een vraag in.")or: *'{user_query}'*):")
-                st.write("De AI haalt hier straks de relevante passages uit de geüploade boeken en artikelen op om je van een onderbouwd antwoord te voorzien.")
         else:
             st.warning("Voer eerst een vraag in.")
