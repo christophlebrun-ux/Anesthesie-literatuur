@@ -39,7 +39,7 @@ with tab1:
     else:
         st.info("Nog geen literatuur geüpload. Upload hierboven het eerste bestand.")
 
-# --- TAB 2: Ask Dr. Soetens ---
+# --- TAB 2: Ask Dr. Soetens --- 
 with tab2:
     st.header("🤖 Ask Dr. Soetens")
     st.markdown("Stel vragen over de toegevoegde boeken en artikelen in de literatuurbank.")
